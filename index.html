@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutCraft Reels | Professional Video Editing</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#a855f7',
+                        dark: '#0f172a',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-reverse': 'float-reverse 5s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'float-reverse': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #6366f1;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+    </style>
+</head>
+<body class="bg-dark text-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-white flex items-center">
+                    <span class="text-primary">Cut</span><span class="text-secondary">Craft</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-primary transition">Home</a>
+                    <a href="#about" class="nav-link text-white hover:text-primary transition">About</a>
+                    <a href="#portfolio" class="nav-link text-white hover:text-primary transition">Portfolio</a>
+                    <a href="#reviews" class="nav-link text-white hover:text-primary transition">Reviews</a>
+                    <a href="#contact" class="nav-link text-white hover:text-primary transition">Contact</a>
+                </div>
+                <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-dark/95 py-4 px-6" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="nav-link text-white hover:text-primary transition">Home</a>
+                <a href="#about" class="nav-link text-white hover:text-primary transition">About</a>
+                <a href="#portfolio" class="nav-link text-white hover:text-primary transition">Portfolio</a>
+                <a href="#reviews" class="nav-link text-white hover:text-primary transition">Reviews</a>
+                <a href="#contact" class="nav-link text-white hover:text-primary transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-12 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        <span class="text-primary">Transform</span> Your
+                        <span class="text-secondary">Vision</span> Into Motion
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8 max-w-lg">
+                        Professional video editing services that bring your stories to life with cinematic quality and creative flair.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#portfolio" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-medium transition shadow-lg shadow-primary/30">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-full font-medium transition">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="relative w-full max-w-lg mx-auto">
+                        <div class="absolute -top-10 -left-10 w-32 h-32 bg-primary/20 rounded-full filter blur-xl animate-pulse"></div>
+                        <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-secondary/20 rounded-full filter blur-xl animate-pulse delay-300"></div>
+                        <div class="relative overflow-hidden rounded-2xl shadow-2xl border-2 border-gray-700">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="text-primary">Me</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-12 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 relative">
+                            <img src="http://static.photos/people/640x360/42" alt="Video Editor" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-5 -right-5 bg-primary text-white px-6 py-2 rounded-full font-medium">
+                            <span class="text-xl">5+</span> years
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-6">Professional Video Editor & Motion Designer</h3>
+                    <p class="text-gray-300 mb-6">
+                        I'm passionate about transforming raw footage into compelling visual stories. With over 5 years of experience in video editing and post-production, I've worked with clients across various industries to create engaging content that resonates with their audience.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                <i data-feather="film" class="text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Video Editing</h4>
+                                <p class="text-gray-400 text-sm">Professional editing for commercials, music videos, and short films.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary/10 p-3 rounded-full mr-4">
+                                <i data-feather="activity" class="text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Motion Graphics</h4>
+                                <p class="text-gray-400 text-sm">Dynamic animations and visual effects to enhance your content.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                <i data-feather="aperture" class="text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Color Grading</h4>
+                                <p class="text-gray-400 text-sm">Cinematic color correction to achieve the perfect look.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary/10 p-3 rounded-full mr-4">
+                                <i data-feather="volume-2" class="text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Audio Mixing</h4>
+                                <p class="text-gray-400 text-sm">Clean audio enhancement and sound design for professional results.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm">Adobe Premiere Pro</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm">After Effects</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm">DaVinci Resolve</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm">Cinema 4D</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="text-primary">Portfolio</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">Explore my collection of work across different genres and styles.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Portfolio Item 1 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-2xl border border-gray-800 transition-all hover:border-primary/50">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Music Video - "Summer Vibes"</h3>
+                            <p class="text-gray-300">Full production including editing, color grading, and visual effects.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-2xl border border-gray-800 transition-all hover:border-primary/50">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Commercial - Tech Startup</h3>
+                            <p class="text-gray-300">Corporate video with motion graphics and animated infographics.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-2xl border border-gray-800 transition-all hover:border-primary/50">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Short Film - "Midnight Drive"</h3>
+                            <p class="text-gray-300">Narrative editing with cinematic color grading and sound design.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-2xl border border-gray-800 transition-all hover:border-primary/50">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Travel Vlog Series</h3>
+                            <p class="text-gray-300">Editing and color grading for a 12-episode travel series.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-2xl border border-gray-800 transition-all hover:border-primary/50">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Product Launch Video</h3>
+                            <p class="text-gray-300">High-energy edit with 3D product animations and kinetic typography.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-2xl border border-gray-800 transition-all hover:border-primary/50">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Corporate Training Series</h3>
+                            <p class="text-gray-300">Multi-camera editing with animated lower thirds and transitions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 transition">
+                    View More Projects
+                    <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client <span class="text-primary">Testimonials</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">What my clients say about working with me.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-primary/50 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="http://static.photos/people/200x200/101" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-400 text-sm">Marketing Director, TechCorp</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "Working with this editor was a game-changer for our product launch. The attention to detail and creative approach resulted in a video that exceeded all our expectations."
+                    </p>
+                    <div class="flex">
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-primary/50 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="http://static.photos/people/200x200/102" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-400 text-sm">Artist Manager</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "The music video editing was phenomenal. They perfectly captured the mood of the song and added creative elements we hadn't even considered. Will definitely work with them again!"
+                    </p>
+                    <div class="flex">
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-primary/50 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="http://static.photos/people/200x200/103" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Emma Rodriguez</h4>
+                            <p class="text-gray-400 text-sm">Founder, TravelVlog</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "The turnaround time was impressive, and the quality was even better. They took my raw travel footage and transformed it into a cinematic experience that my audience loved."
+                    </p>
+                    <div class="flex">
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 mr-1"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="text-primary">Touch</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">Ready to start your project? Send me a message and I'll get back to you within 24 hours.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition" placeholder="hello@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition" placeholder="Project Inquiry">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-300 mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition" placeholder="Tell me about your project"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-medium transition shadow-lg shadow-primary/30 w-full md:w-auto">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800 rounded-xl p-8 h-full border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i data-feather="mail" class="text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <a href="mailto:contact@cutcraft.com" class="text-gray-400 hover:text-primary transition">contact@cutcraft.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-secondary/10 p-3 rounded-full mr-4">
+                                    <i data-feather="phone" class="text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Phone</h4>
+                                    <a href="tel:+1234567890" class="text-gray-400 hover:text-primary transition">+1 (234) 567-890</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i data-feather="map-pin" class="text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Location</h4>
+                                    <p class="text-gray-400">Los Angeles, CA</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-secondary/10 p-3 rounded-full mr-4">
+                                    <i data-feather="clock" class="text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Working Hours</h4>
+                                    <p class="text-gray-400">Mon-Fri: 9am - 6pm PST</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-gray-700 hover:bg-primary/20 text-white p-3 rounded-full transition">
+                                    <i data-feather="instagram" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-primary/20 text-white p-3 rounded-full transition">
+                                    <i data-feather="youtube" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-primary/20 text-white p-3 rounded-full transition">
+                                    <i data-feather="linkedin" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-primary/20 text-white p-3 rounded-full transition">
+                                    <i data-feather="twitter" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-white flex items-center">
+                        <span class="text-primary">Cut</span><span class="text-secondary">Craft</span>
+                    </a>
+                    <p class="text-gray-400 mt-2">Bringing your vision to life through expert video editing.</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <a href="#home" class="text-gray-400 hover:text-primary transition">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-primary transition">About</a>
+                    <a href="#portfolio" class="text-gray-400 hover:text-primary transition">Portfolio</a>
+                    <a href="#reviews" class="text-gray-400 hover:text-primary transition">Reviews</a>
+                    <a href="#contact" class="text-gray-400 hover:text-primary transition">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 CutCraft Reels. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-primary transition text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-primary transition text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Initialize feather icons
+        feather.replace();
+
+        // Initialize Vanta.js background
+        VANTA.GLOBE({
+            el: "#home",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x6366f1,
+            color2: 0xa855f7,
+            backgroundColor: 0x0f172a,
+            size: 0.8
+        });
+    </script>
+</body>
+</html>
